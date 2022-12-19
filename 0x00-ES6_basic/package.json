@@ -1,0 +1,11 @@
+{
+  "scripts" : {
+    "dev": "node 1-main.js"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.3.1"
+  }
+}
