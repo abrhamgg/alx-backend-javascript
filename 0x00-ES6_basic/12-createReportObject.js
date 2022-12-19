@@ -1,5 +1,10 @@
-export default function createEmployeesObject(departmentName, employees) {
+export default function createReportObject(employeesList) {
     return {
-      [`${departmentName}`]: employees,
+      allEmployees: {
+        ...employeesList,
+      },
+      getNumberOfDepartments(employeesList) {
+        return Object.keys(employeesList).length;
+      },
     };
   }
