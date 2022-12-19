@@ -1,1 +1,1 @@
-# Introduction to ES6
+# ES6
