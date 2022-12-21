@@ -10,7 +10,7 @@ export default async function handleProfileSignup(firstName, lastName, filename)
   } catch (err) {
     data.push({
       status: 'rejected',
-      value: `Error ${filename} cannot be processed`,
+      value: `Error: ${filename} cannot be processed`,
     });
   }
   return data;
