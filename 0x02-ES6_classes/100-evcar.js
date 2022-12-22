@@ -7,6 +7,7 @@ export default class EVCar extends Car {
   }
 
   cloneCar() {
+    if (!this._brand) { console.log(''); }
     return new Car();
   }
 }
