@@ -7,7 +7,7 @@ interface DirectorInterface {
 interface TeacherInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
-  workDirectorTasks(): string;
+  workTeacherTasks(): string;
 }
 
 class Director implements DirectorInterface {
@@ -29,7 +29,7 @@ class Teacher implements TeacherInterface {
   getCoffeeBreak(): string {
     return 'Getting a coffee break';
   }
-  workDirectorTasks(): string {
+  workTeacherTasks(): string {
     return 'Getting to work';
   }
 }
@@ -46,5 +46,20 @@ function createEmployee(salary: string | number): TeacherInterface | DirectorInt
     return new Director;
   } else {
     return new Teacher;
+  }
+}
+
+function isDirector(employee:unknown):boolean {
+  if (employee instanceof Teacher) {
+    return true;
+  }
+  return false;
+}
+
+function executeWork(employee: Teacher | Director): void {
+  if (employee instanceof Director) {
+    employee.workDirectorTasks();
+  } else if (employee instanceof Teacher) {
+    employee.workTeacherTasks();
   }
 }
