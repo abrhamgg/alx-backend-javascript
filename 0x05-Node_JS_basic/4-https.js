@@ -8,3 +8,5 @@ const app = http.createServer((_req, res) => {
 app.listen(port, () => {
   console.log('server has started');
 });
+
+module.exports = app;
