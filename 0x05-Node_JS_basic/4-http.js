@@ -5,11 +5,9 @@ const port = 1245;
 const app = http.createServer((_req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello Holberton School!\n');
+  res.end('Hello Holberton School!');
 });
 
-app.listen(port, hostname, () => {
-  console.log('server has started');
-});
+app.listen(port, hostname);
 
 module.exports = app;
