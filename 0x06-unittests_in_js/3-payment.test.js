@@ -13,5 +13,5 @@ describe('sendPaymentRequestToApi', function() {
         expect(consoleSpy.calledWithExactly('The total is: 120')).to.equal(true);
         calcNumSpy.restore();
         consoleSpy.restore();
-    })
+    });
 });
